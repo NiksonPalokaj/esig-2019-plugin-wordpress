@@ -20,7 +20,7 @@ src="http://monsite.com/wp-content/plugins/ico-plugin/img/'.$content.'.png"
 
 //Enregistre les shortcodes du plugin
 function ico_plugin_register_shortcode() {
-    add_shortcode( 'yoda', 'mon_plugin_yoda_shortcode' );
+    add_shortcode( 'ico', 'ico_plugin_yoda_shortcode' );
 
 }
 add_action( 'init', 'mon_plugin_register_shortcode' );
