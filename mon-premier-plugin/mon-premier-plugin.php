@@ -8,3 +8,14 @@ function mon_plugin_meta_keywords() {
 }
 //Ajout d'une action sur 'wp_head' qui appellera mon_plugin_meta_keywords()
 add_action('wp_head', 'mon_plugin_meta_keywords' );
+
+
+//Fonction qui retourne la célèbre citation de maître Yoda
+function mon_plugin_yoda_shortcode() {
+    return "<blockquote>Que la force soit avec toi jeune padawan !</blockquote>";
+}
+//Enregistre les shortcodes du plugin
+function mon_plugin_register_shortcode() {
+    add_shortcode( 'yoda', 'mon_plugin_yoda_shortcode' );
+}
+add_action( 'init', 'mon_plugin_register_shortcode' );
